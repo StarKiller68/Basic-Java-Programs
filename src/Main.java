@@ -169,6 +169,50 @@ public class Main {
         return list.stream().noneMatch(no->no%2==0);
     }
 
+    public static int fibRecursion(int n)
+    {
+        if (n <= 1)
+            return n;
+        return fibRecursion(n - 1) + fibRecursion(n - 2);
+    }
+
+    public static int fibonacciIterative(int n) {
+        if(n <= 1) {
+            return n;
+        }
+        int fib = 1;
+        int prevFib = 1;
+
+        for(int i=2; i<n; i++) {
+            int temp = fib;
+            fib+= prevFib;
+            prevFib = temp;
+        }
+        return fib;
+    }
+
+    public static void PrintFibonacciIter(int N)
+    {
+        int num1 = 0, num2 = 1;
+
+        int counter = 0;
+
+        // Iterate till counter is N
+        while (counter < N) {
+
+            // Print the number
+            System.out.print(num1 + " ");
+
+            // Swap
+            int num3 = num2 + num1;
+            num1 = num2;
+            num2 = num3;
+            counter = counter + 1;
+        }
+    }
+
+
+
 
 
 }
