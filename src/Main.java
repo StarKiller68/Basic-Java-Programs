@@ -211,6 +211,18 @@ public class Main {
         }
     }
 
+    public static boolean isPalindromeNumber(int number){
+        int reversed_n = 0;
+        while (number > 0) {
+            reversed_n = reversed_n * 10 + number % 10;
+            number = number / 10;
+        }
+        if(reversed_n == number)
+            return true;
+        else
+            return false;
+    }
+
 
 
 
