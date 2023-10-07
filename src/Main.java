@@ -137,7 +137,7 @@ public class Main {
         return true;
     }
 
-    static boolean isPrimeOpt(int n)
+    public static boolean isPrimeOpt(int n)
     {
         // Corner case
         if (n <= 1)
@@ -154,6 +154,19 @@ public class Main {
                 return false;
 
         return true;
+    }
+
+    public static boolean isContainOnlyOddNumbers(List<Integer> list){
+        for(int i : list){
+            if(i%2 == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean isContainOnlyOddNumbersLambda(List<Integer> list){
+        return list.stream().noneMatch(no->no%2==0);
     }
 
 
