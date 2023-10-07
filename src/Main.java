@@ -2,12 +2,13 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int x = 5;
-        int y = 6;
+        int x = 6;
+        int y = 7;
 
-        swapNumNoThirdXOR(x, y);
+        swapNumberSelf(x, y);
+        System.out.println();
 
-
+        System.out.println("x is " + x + " : " + "y is " + y);
 
 
     }
@@ -86,6 +87,25 @@ public class Main {
         x = x ^ y;
         y = x ^ y;
         x = x ^ y;
+        System.out.println("x is " + x + " : " + "y is " + y);
+    }
+
+    // The following method is useful if there is a case
+    // where a number is swapping with itself
+    public static void swapNumberSelf(int xp, int yp)
+    {
+        if (xp == yp) // Check if the two addresses are same
+             System.out.println("x is " + xp + " : " + "y is " + yp);
+            //return;
+        xp = xp + yp;
+        yp = xp - yp;
+        xp = xp - yp;
+        System.out.println("x is " + xp + " : " + "y is " + yp);
+    }
+
+    public static void swapNoThirdOneLine(int x, int y)
+    {
+        x = (x * y) / (y = x);
         System.out.println("x is " + x + " : " + "y is " + y);
     }
 
