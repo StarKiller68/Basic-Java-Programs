@@ -2,9 +2,14 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        String input = "aaa";
+        int x = 5;
+        int y = 6;
 
-        vowelCountArraylist(input);
+        swapNumNoThirdXOR(x, y);
+
+
+
+
     }
 
     public static String reverseStringStringBuilder(String str){
@@ -68,6 +73,20 @@ public class Main {
 
         // display total count of vowels in string
         System.out.println("Total no of vowels in string are: " + count);
+    }
+
+    public static void swapNumNoThird(int x, int y){
+        x = x + y;
+        y = x - y;
+        x = x - y;
+        System.out.println("x is " + x + " : " + "y is " + y);
+    }
+
+    public static void swapNumNoThirdXOR(int x, int y){
+        x = x ^ y;
+        y = x ^ y;
+        x = x ^ y;
+        System.out.println("x is " + x + " : " + "y is " + y);
     }
 
 
