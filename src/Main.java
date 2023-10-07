@@ -223,6 +223,15 @@ public class Main {
             return false;
     }
 
+    public static int reverseNumber(int number){
+        int reversed_n = 0;
+        while (number > 0) {
+            reversed_n = reversed_n * 10 + number % 10;
+            number = number / 10;
+        }
+        return reversed_n;
+    }
+
 
 
 
